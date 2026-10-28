@@ -36,7 +36,7 @@ El original de la v3.2 es `Arquitectura_LA_TROUPE_v3.2.docx` (en Descargas). El 
 2. **No inventar decisiones de negocio.** Precios, comisiones, políticas de reembolso, edades, textos legales: si no está decidido, se anota en `STATUS.md` → "Decisiones abiertas" y se pregunta.
 3. **Verificar antes de afirmar** cómo funcionan servicios externos (MercadoPago, Stripe, Bunny, Supabase). Citar la fuente y marcar lo no confirmado como "pendiente de verificar".
 4. **Al terminar cada sesión de trabajo**: actualizar `STATUS.md` (qué quedó hecho, qué sigue) y agregar una entrada a `CHANGELOG.md`. Es obligatorio.
-5. **No guardar secretos** (claves, tokens, contraseñas) en archivos del repo, en documentos ni en la conversación. Usar variables de entorno y los gestores de secretos del proveedor.
+5. **No guardar secretos** (claves, tokens, contraseñas) en archivos del repo, en documentos ni en la conversación. Usar variables de entorno y los gestores de secretos del proveedor. **El repositorio es público**: todo lo que se commitea lo puede leer cualquiera. Tampoco se suben datos reales de alumnos, contratos ni información financiera; para pruebas se usan datos inventados.
 6. **No hacer commits, pushes ni acciones externas** (crear cuentas, publicar, cobrar) sin pedido explícito del usuario.
 7. Ante una contradicción entre documentos, avisar al usuario y proponer cuál corregir. No elegir en silencio.
 8. Las respuestas al usuario son claras y sin jerga innecesaria. Explicar el *por qué* de cada recomendación y dar una recomendación concreta, no un menú.
