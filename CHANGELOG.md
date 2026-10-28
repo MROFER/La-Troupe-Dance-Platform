@@ -2,6 +2,15 @@
 
 Historial de cambios del proyecto y de sus documentos. Lo más reciente arriba. Formato: fecha, qué cambió, por qué.
 
+## 2026-10-28 (repositorio)
+
+### Agregado
+- Repositorio git propio en la carpeta `La Troupe`, publicado en https://github.com/MROFER/La-Troupe-Dance-Platform. Primer commit con todos los documentos.
+- `README.md` con el índice de documentos y `.gitignore` base (dependencias, secretos `.env`, archivos de sistema).
+
+### Cambiado
+- La carpeta deja de depender del repositorio git del directorio del usuario.
+
 ## 2026-10-28
 
 ### Agregado

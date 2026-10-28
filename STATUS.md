@@ -14,6 +14,7 @@ La arquitectura de datos está definida en la v3.3 (sobre la base de la v3.2). F
 - Arquitectura v3.3 escrita (`Arquitectura_LA_TROUPE_v3.3.md` y `.pdf`).
 - `AGENTS.md`, `STATUS.md`, `CHANGELOG.md`, `PLAN.md` y `CLAUDE.md` creados.
 - Primera investigación de qué reutilizar y qué verificar (ver "Hechos verificados").
+- Repositorio propio creado: https://github.com/MROFER/La-Troupe-Dance-Platform (privado, rama `main`). La carpeta local `La Troupe` es la raíz del repositorio. Todavía tiene solo documentos; la estructura `/docs`, `/supabase`, `/web` del Paso 7 está pendiente.
 
 ## En curso
 
@@ -49,7 +50,7 @@ La arquitectura de datos está definida en la v3.3 (sobre la base de la v3.2). F
 | D6 | Política de reembolsos de cursos on demand | Fase 1A | Usuario + asesoría |
 | D7 | Edad mínima para cuenta propia y consentimiento de padres | Fase 1A | Usuario + asesoría legal |
 | D8 ⛔ | Forma jurídica y cuenta de MercadoPago con la que se cobrará | Fase 1A | Usuario |
-| D9 | Nombre de dominio y marca de la plataforma | Fase 1A | Usuario |
+| D9 | Nombre de dominio y marca de la plataforma (el repositorio se llama `La-Troupe-Dance-Platform`; la marca comercial sigue abierta) | Fase 1A | Usuario |
 | D10 | Proveedor de video definitivo (Bunny.net propuesto) | Fase 0 | Se decide tras el spike |
 
 ## Hechos verificados (2026-10-28)
@@ -70,7 +71,6 @@ La arquitectura de datos está definida en la v3.3 (sobre la base de la v3.2). F
 - IVA y fiscalidad de venta digital a España: requiere contador.
 - Datos de menores (notas, salud, fotos): requiere asesoría legal.
 - Volumen de tablas alto: se crean por fase, con pruebas de permisos desde el inicio.
-- La carpeta `La Troupe` está dentro de un repositorio git que cubre todo el directorio del usuario. **No usarlo.** Crear un repositorio propio en el Paso 7.
 
 ## Notas para quien retome
 
