@@ -1,0 +1,25 @@
+# Dependencias y builds
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+supabase/.temp/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Archivos temporales de Office
+~$*
+
+# Claude Code (configuración local)
+.claude/settings.local.json
