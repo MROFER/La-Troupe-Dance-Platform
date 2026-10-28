@@ -14,7 +14,7 @@ La arquitectura de datos está definida en la v3.3 (sobre la base de la v3.2). F
 - Arquitectura v3.3 escrita (`Arquitectura_LA_TROUPE_v3.3.md` y `.pdf`).
 - `AGENTS.md`, `STATUS.md`, `CHANGELOG.md`, `PLAN.md` y `CLAUDE.md` creados.
 - Primera investigación de qué reutilizar y qué verificar (ver "Hechos verificados").
-- Repositorio propio creado: https://github.com/MROFER/La-Troupe-Dance-Platform (privado, rama `main`). La carpeta local `La Troupe` es la raíz del repositorio. Todavía tiene solo documentos; la estructura `/docs`, `/supabase`, `/web` del Paso 7 está pendiente.
+- Repositorio propio creado: https://github.com/MROFER/La-Troupe-Dance-Platform (rama `main`). **Es público** (verificado el 2026-10-28): pendiente que el usuario lo pase a privado. La carpeta local `La Troupe` es la raíz del repositorio. Todavía tiene solo documentos; la estructura `/docs`, `/supabase`, `/web` del Paso 7 está pendiente.
 
 ## En curso
 
