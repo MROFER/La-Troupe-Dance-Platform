@@ -22,9 +22,10 @@ LA TROUPE es la primera academia y **no se cobra a sí misma**. Lo de SaaS es a 
 
 | Archivo | Para qué |
 |---|---|
-| `Arquitectura_LA_TROUPE_v3.3.md` | Arquitectura vigente. Manda sobre la v3.2 donde se contradicen |
-| `Arquitectura_LA_TROUPE_v3.2.md` | Base: tablas y secciones que la v3.3 no cambia |
 | `PLAN.md` | Pasos en orden, con criterios para pasar al siguiente |
+| `docs/infraestructura.md` | Análisis de infraestructura y costos por etapa (propuesta, pendiente de ADR) |
+| `Arquitectura_LA_TROUPE_v3.3.md` | **Prototipo**, no arquitectura decidida. Se usa como insumo y lista de ideas a validar |
+| `Arquitectura_LA_TROUPE_v3.2.md` | Prototipo anterior; insumo |
 | `STATUS.md` | Dónde estamos hoy, qué sigue, qué está abierto |
 | `CHANGELOG.md` | Historial de cambios del proyecto y de los documentos |
 
@@ -41,9 +42,11 @@ El original de la v3.2 es `Arquitectura_LA_TROUPE_v3.2.docx` (en Descargas). El 
 7. Ante una contradicción entre documentos, avisar al usuario y proponer cuál corregir. No elegir en silencio.
 8. Las respuestas al usuario son claras y sin jerga innecesaria. Explicar el *por qué* de cada recomendación y dar una recomendación concreta, no un menú.
 
-## 5. Decisiones de arquitectura que no se discuten sin motivo fuerte
+## 5. Hipótesis del prototipo (a validar, no decididas)
 
-Resumen de la v3.3. El detalle y las tablas están en el documento.
+**Decisión del usuario (2026-10-28): la v3.2 y la v3.3 son prototipos.** Ni la arquitectura ni el stack están decididos. Se definen desde los requisitos, comparando alternativas con criterios explícitos y verificando con pruebas (ver `PLAN.md`). Un agente **no debe** tratar estas hipótesis como verdad ni construir sobre ellas sin que figuren como decididas en `STATUS.md`.
+
+Lo que sí sale del prototipo como **requisitos del negocio** (esto no es arquitectura, es lo que el sistema tiene que poder hacer) está en `STATUS.md` → "Decisiones tomadas". Lo siguiente son las **soluciones** que propuso el prototipo:
 
 - **Multi-tenant desde el día uno**: `organization_id` en las tablas relevantes y Row-Level Security en PostgreSQL. Hoy hay una sola organización.
 - **Identidad global**: un email único en toda la plataforma; las relaciones con cada academia se modelan con `memberships`.
@@ -61,9 +64,11 @@ Resumen de la v3.3. El detalle y las tablas están en el documento.
 - **Captura de datos desde el día uno** (progreso, visualizaciones, eventos): lo que no se captura hoy no se recupera mañana.
 - **Lo caro de cambiar se reserva ahora; lo independiente se crea cuando toca** (sección 1.2 de la v3.3).
 
-## 6. Stack propuesto (sujeto a confirmación en `PLAN.md`, paso 3)
+## 6. Stack: sin decidir
 
-Next.js + TypeScript sobre Vercel; Supabase (PostgreSQL con RLS, Auth, Storage, Edge Functions, `pg_cron`); Bunny.net Stream para video con Vidstack como reproductor; MercadoPago primero y Stripe en una fase posterior; Resend para email; Sentry para errores. **No está decidido definitivamente hasta que `STATUS.md` lo registre como decidido.**
+El prototipo propuso Next.js + Supabase + Bunny.net + Vidstack + MercadoPago/Stripe + Vercel + Resend + Sentry. Es **un candidato entre varios**. La propuesta más reciente del agente (Vercel + Supabase para base y Auth + Cloudflare para DNS, R2 y Turnstile + Mux al inicio y video propio en R2 a escala) está en `docs/infraestructura.md`.
+
+**Herramientas del proyecto:** skills de Matt Pocock (proceso: `grill-me`, `domain-modeling`, `to-spec`, `tdd`…), skills oficiales de Supabase y el MCP Context7, instalados a nivel del proyecto. Para la documentación de cualquier librería, usar Context7 antes que la memoria. El usuario prefiere escuchar a leer: hay un panel "Lector de voz" que lee las respuestas (complemento de sesión; su estado está en `STATUS.md`), así que conviene escribirlas para el oído (párrafos cortos, pocas tablas, sin URLs sueltas en el cuerpo). Se elige en el Paso 3 de `PLAN.md`, contra los requisitos y criterios del Paso 2, y queda registrado como decisión (qué, por qué, alternativas descartadas).
 
 ## 7. Convenciones (a completar en la Fase 0)
 
@@ -77,6 +82,6 @@ Next.js + TypeScript sobre Vercel; Supabase (PostgreSQL con RLS, Auth, Storage, 
 
 1. Leer `AGENTS.md`, `STATUS.md`, `PLAN.md`.
 2. Leer `CHANGELOG.md` solo si hace falta el historial.
-3. Abrir la v3.3 solo en las secciones relevantes a la tarea (es larga).
+3. Abrir la v3.3 solo en las secciones relevantes, y recordar que es un prototipo.
 4. Confirmar con el usuario en qué paso del plan se trabaja hoy.
 5. Al cerrar: actualizar `STATUS.md` y `CHANGELOG.md`.

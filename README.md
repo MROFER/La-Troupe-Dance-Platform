@@ -12,6 +12,7 @@ Plataforma de formación en danza: cursos on demand, avance curricular, evaluaci
 | [STATUS.md](STATUS.md) | Estado actual, decisiones abiertas, hechos verificados |
 | [PLAN.md](PLAN.md) | Pasos desde la propuesta comercial hasta el primer código |
 | [CHANGELOG.md](CHANGELOG.md) | Historial de cambios |
+| [docs/infraestructura.md](docs/infraestructura.md) | Infraestructura y costos por etapa |
 | [Arquitectura_LA_TROUPE_v3.3.md](Arquitectura_LA_TROUPE_v3.3.md) | Arquitectura vigente |
 | [Arquitectura_LA_TROUPE_v3.2.md](Arquitectura_LA_TROUPE_v3.2.md) | Arquitectura base (lo que la v3.3 no cambia) |
 

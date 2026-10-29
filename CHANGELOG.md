@@ -2,6 +2,35 @@
 
 Historial de cambios del proyecto y de sus documentos. Lo más reciente arriba. Formato: fecha, qué cambió, por qué.
 
+## 2026-10-28 (infraestructura, skills y lector de voz)
+
+### Agregado
+- `docs/infraestructura.md`: análisis iterado (tres pasadas y tres revisiones) de VPS, hosting, base de datos, autenticación, archivos, video, correo y costos por etapa.
+- Skills a nivel del proyecto: `mattpocock-skills`, `supabase`, `postgres-best-practices` (`.claude/settings.json`), y MCP Context7 (`.mcp.json`).
+- Complemento "Lector de voz" (fuera del repositorio, en la carpeta de complementos de la sesión): lee las respuestas en voz alta con la voz Helena de Windows. Escrito y validado; no cargado todavía.
+
+### Corregido
+- `STATUS.md`: las skills de Supabase incluyen también el servidor MCP de Supabase limitado a documentación (inactivo hasta autorizarlo); antes se dijo que eran solo instrucciones.
+- `PLAN.md`: spikes S9 (Vercel frente a Cloudflare Workers) y S10 (video propio en R2).
+
+### Cambiado
+- Stack candidato: archivos en Cloudflare R2; Cloudflare también para DNS, Turnstile y CDN; Mux al inicio y video propio en R2 a escala; sin VPS al inicio.
+- Costos estimados actualizados: lanzamiento ~USD 65–80/mes (incluye staging); 500 alumnos ~USD 320–500/mes; 5.000 simultáneos ~USD 5.300–42.400 con video administrado o ~USD 900–2.200 con video propio.
+
+## 2026-10-28 (cambio de enfoque)
+
+### Cambiado
+- La v3.2 y la v3.3 pasan a ser **prototipos**, por decisión del usuario. Ni la arquitectura ni el stack están decididos.
+- `PLAN.md`: el Paso 2 pasa a ser "Requisitos y criterios de calidad" y el Paso 3 "Opciones de arquitectura y stack, evaluadas", con registros de decisión (ADR) y una arquitectura v4 nueva al final.
+- `AGENTS.md`: las decisiones de arquitectura pasan a "hipótesis a validar"; el stack queda sin decidir.
+
+### Agregado
+- `STATUS.md`: investigación de skills, herramientas de seguridad, repositorios oficiales y plataformas de cursos de código abierto.
+- `STATUS.md`: stack candidato con precios verificados y modelo de costo de video. Hallazgos que corrigen el prototipo: Vercel Hobby no permite uso comercial; Supabase Free se pausa; para audiencia latinoamericana Bunny no es mucho más barato que Mux o Cloudflare; Stripe probablemente no admite empresas uruguayas.
+- `PLAN.md`: el spike S1 compara Mux y Bunny; nuevo spike S7 (cobro internacional desde Uruguay).
+- `PLAN.md`: 10 reglas de escala obligatorias para la v4 y spike S8 (prueba de carga). El atributo "Escala" incluye el pico de usuarios simultáneos (meta: 5.000).
+- `STATUS.md`: análisis de carga y costo para 5.000 usuarios simultáneos, incluido el caso de clases en vivo.
+
 ## 2026-10-28 (repositorio)
 
 ### Agregado
